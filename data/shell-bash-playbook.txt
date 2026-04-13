@@ -1,6 +1,7 @@
 SHELL BASH PLAYBOOK
 
-======================
+
+=========================================================================================================================
 QUICK MODEL FOR TROUBLESHOOTING
 1. Navigate → ls, cd, pwd
 2. Inspect → cat, less, grep
@@ -8,7 +9,8 @@ QUICK MODEL FOR TROUBLESHOOTING
 4. Check network → ip, ping, ss
 5. Check services → systemctl
 6. Check logs → journalctl
-======================
+=========================================================================================================================
+
 
 💻 NAVIGATION & DIRECTORY MANAGEMENT
 
@@ -25,7 +27,8 @@ cd : Go to home directory
 cd <dir> : Change directory
 cd .. : Parent directory
 cd - : Previous directory
-____________________________________________________________________________________________________________________________________________________________
+
+_________________________________________________________________________________________________________________________
 
 📁 FILE & DIRECTORY OPERATIONS
 
@@ -48,7 +51,8 @@ rm -rf <dir> : Force remove directory
 rm -i <file> : Interactive mode to prompt before removal
 
 Test-Path equivalent → test -e <path> : Check if file or directory exists
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 📄 VIEWING & SEARCHING FILES
 
@@ -81,7 +85,8 @@ awk '{print $1}' <file> : Extract columns from text
 grep <pattern> <file> : Search text
 grep -i <pattern> <file> : Case-insensitive
 grep -r <pattern> <dir> : Recursive search
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 🔐 PERMISSIONS & OWNERSHIP
 
@@ -95,7 +100,8 @@ chown <user>:<group> <file> : Change owner + group
 chgrp <group> <file> : Change group ownership
 
 umask : Show/set default permissions
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 👤 USERS & IDENTITY
 
@@ -115,7 +121,8 @@ passwd <user> : Set/change password
 su : Switch user
 su - : Switch user with full environment
 sudo <command> : Run command as root
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 🔎 SYSTEM INFORMATION
 
@@ -142,7 +149,8 @@ ps aux : Process list
 ps -ef : Alternative full process list format
 top : Real-time processes
 htop : Enhanced process viewer (if installed)
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 🧠 PROCESS MANAGEMENT
 
@@ -158,7 +166,8 @@ pgrep <name> : Find process ID by name
 jobs : Show background jobs
 bg : Resume job in background
 fg : Bring job to foreground
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 🔌 NETWORKING
 
@@ -185,7 +194,8 @@ nslookup <host> : DNS lookup
 dig <host> : Detailed DNS query
 
 nmtui : Open NetworkManager text UI
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 ⚙️ SYSTEM CONTROL SERVICES
 
@@ -200,7 +210,8 @@ systemctl disable <svc> : Disable at boot
 systemctl daemon-reload : Reload systemd configs
 systemctl list-units --type=service : List active services
 systemctl list-unit-files : List all services
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 📦 PACKAGE MANAGEMENT
 
@@ -219,7 +230,8 @@ dnf autoremove : Remove unused packages
 dnf repolist : Show repositories
 
 yum install/update : Legacy compatibility
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 📜 LOGS & TROUBLESHOOTING
 
@@ -233,7 +245,8 @@ journalctl -b : Logs since last boot
 
 dmesg : Kernel logs
 dmesg | tail : Recent kernel logs
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 📂 FILE SYSTEM & LINKS
 
@@ -256,7 +269,8 @@ umount <dir> : Unmount device
 /mnt : Temporary mount points
 /run : Runtime system info
 /dev /proc /sys : System internals
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 🗃️ ARCHIVING
 
@@ -264,7 +278,8 @@ tar -cvf <file.tar> <files> : Create archive
 tar -xvf <file.tar> : Extract archive
 tar -czvf <file.tar.gz> <files> : Create compressed archive
 tar -tvf <file.tar> : View archive contents
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 🧰 HELP & UTILITIES
 
@@ -295,7 +310,8 @@ reboot : Reboot
 
 <incomplete command><press tab> : Autocomplete command
 <command><press tab><press tab> : View subcommands
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 🎯 CORE COMMANDS TO PRIORITISE
 

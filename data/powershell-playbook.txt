@@ -1,6 +1,7 @@
 POWERSHELL PLAYBOOK
 
-======================
+
+=========================================================================================================================
 QUICK MODEL FOR TROUBLESHOOTING
 1. Navigate → Get-Location, Set-Location, Get-ChildItem
 2. Inspect → Get-Content, Select-String, Format-List
@@ -8,7 +9,8 @@ QUICK MODEL FOR TROUBLESHOOTING
 4. Check network → Get-NetIPAddress, Test-Connection, Get-NetTCPConnection
 5. Check services / tasks → Get-Service, Start-Service, Get-ScheduledTask
 6. Check logs / events → Get-EventLog, Get-WinEvent
-======================
+=========================================================================================================================
+
 
 💻 NAVIGATION & DIRECTORY MANAGEMENT
 
@@ -28,7 +30,8 @@ Get-ChildItem -Force : Include hidden items
 Get-ChildItem -Recurse : List items recursively
 Get-ChildItem -File : Show only files
 Get-ChildItem -Directory : Show only directories
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 📁 FILE & DIRECTORY OPERATIONS
 
@@ -48,7 +51,8 @@ Rename-Item <old> <new> : Rename file or directory
 
 Test-Path <path> : Check whether path exists
 Resolve-Path <path> : Show full resolved path
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 📄 VIEWING, SEARCHING & OBJECT INSPECTION
 
@@ -75,7 +79,8 @@ Where-Object { $_.<property> -eq <value> } : Filter objects by condition
 Sort-Object <property> : Sort objects by property
 Measure-Object : Count / measure objects
 Get-Member : Inspect object properties and methods
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 🔐 PERMISSIONS & OWNERSHIP
 
@@ -90,7 +95,8 @@ icacls <path> /inheritance:d : Disable inheritance
 Set-ExecutionPolicy <policy> : Change PowerShell script execution policy
 Get-ExecutionPolicy : Show current execution policy
 Get-ExecutionPolicy -List : Show execution policy at all scopes
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 👤 USERS & IDENTITY
 
@@ -111,7 +117,8 @@ Add-LocalGroupMember -Group <group> -Member <user> : Add user to local group
 Remove-LocalGroupMember -Group <group> -Member <user> : Remove user from local group
 
 Get-Credential : Prompt for username and password
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 🔎 SYSTEM INFORMATION
 
@@ -137,7 +144,8 @@ Stop-Process -Id <pid> : Stop process by PID
 
 Get-Service : Show services
 Get-Service <svc> : Show specific service
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 🧠 OBJECT, PIPELINE & FILTERING BASICS
 
@@ -154,7 +162,8 @@ Where-Object : Filter objects
 Sort-Object : Sort objects
 Measure-Object : Count or measure objects
 ForEach-Object : Perform action on each object
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 🔌 NETWORKING
 
@@ -182,7 +191,8 @@ nslookup <host> : Legacy DNS lookup utility
 Restart-NetAdapter -Name <adapter> : Restart network adapter
 Disable-NetAdapter -Name <adapter> : Disable adapter
 Enable-NetAdapter -Name <adapter> : Enable adapter
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 ⚙️ SYSTEM CONTROL SERVICES
 
@@ -205,7 +215,8 @@ Start-ScheduledTask -TaskName <name> : Start scheduled task
 Stop-ScheduledTask -TaskName <name> : Stop scheduled task
 Disable-ScheduledTask -TaskName <name> : Disable scheduled task
 Enable-ScheduledTask -TaskName <name> : Enable scheduled task
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 📦 SOFTWARE, PACKAGES & MODULES
 
@@ -227,7 +238,8 @@ Find-Module <name> : Search PowerShell module
 Install-Module <name> : Install PowerShell module
 Import-Module <name> : Load module into session
 Update-Module <name> : Update module
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 📜 LOGS, EVENTS & TROUBLESHOOTING
 
@@ -246,7 +258,8 @@ Get-History : Show PowerShell command history
 Clear-History : Clear session history
 Start-Transcript : Start recording PowerShell session
 Stop-Transcript : Stop recording PowerShell session
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 📂 FILE SYSTEM, PATHS & ENVIRONMENT VARIABLES
 
@@ -262,13 +275,15 @@ Set-Location Env: : Navigate environment variables drive
 Set-Location HKLM:\ : Navigate registry hive in PowerShell provider
 
 New-Item -ItemType SymbolicLink -Path <link> -Target <target> : Create symbolic link
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 🗃️ ARCHIVING
 
 Compress-Archive -Path <src> -DestinationPath <file.zip> : Create ZIP archive
 Expand-Archive -Path <file.zip> -DestinationPath <dest> : Extract ZIP archive
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 🧪 SCRIPTING & EXECUTION
 
@@ -292,7 +307,8 @@ while (<condition>) { } : Loop while condition is true
 
 try { } catch { } : Error handling
 try { } catch { } finally { } : Error handling with cleanup
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 🧰 HELP & UTILITIES
 
@@ -317,7 +333,8 @@ Stop-Computer : Shut down system
 
 Tab : Autocomplete command, parameter or path
 Get-Command *<term>* : Search for commands by wildcard
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 🎯 CORE COMMANDS TO PRIORITISE
 

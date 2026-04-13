@@ -1,6 +1,7 @@
 COMMAND PROMPT PLAYBOOK
 
-======================
+
+=========================================================================================================================
 QUICK MODEL FOR TROUBLESHOOTING
 1. Navigate → cd, dir
 2. Inspect → type, more, findstr
@@ -8,7 +9,8 @@ QUICK MODEL FOR TROUBLESHOOTING
 4. Check network → ipconfig, ping, netstat
 5. Check services / tasks → sc, tasklist, taskkill
 6. Check output / logs → type, eventquery, wevtutil
-======================
+=========================================================================================================================
+
 
 💻 NAVIGATION & DIRECTORY MANAGEMENT
 
@@ -25,7 +27,8 @@ dir /o : Sort output
 dir /s : List recursively
 
 <drive>: : Switch drive, e.g. C:
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 📁 FILE & DIRECTORY OPERATIONS
 
@@ -50,7 +53,8 @@ del /q <file> : Quiet delete
 erase <file> : Alias for del
 
 if exist <path> : Check whether file or directory exists
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 📄 VIEWING & SEARCHING FILES
 
@@ -66,7 +70,8 @@ findstr /s "<pattern>" * : Recursive search
 
 sort <file> : Sort lines
 fc <file1> <file2> : Compare two files
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 🔐 PERMISSIONS & OWNERSHIP
 
@@ -82,7 +87,8 @@ icacls <path> /inheritance:e : Enable inheritance
 icacls <path> /inheritance:d : Disable inheritance
 
 takeown /f <path> : Take ownership of file or folder
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 👤 USERS & IDENTITY
 
@@ -101,7 +107,8 @@ net localgroup <group> <user> /add : Add user to local group
 net localgroup <group> <user> /delete : Remove user from local group
 
 runas /user:<user> <command> : Run command as another user
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 🔎 SYSTEM INFORMATION
 
@@ -119,7 +126,8 @@ tasklist /fi "IMAGENAME eq <name>" : Filter process list
 driverquery : Show installed drivers
 wmic os get caption,version : Show OS information
 wmic computersystem get model,name,manufacturer : Show system model information
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 🧠 PROCESS MANAGEMENT
 
@@ -132,7 +140,8 @@ taskkill /im <name>.exe : Kill process by image name
 taskkill /f /im <name>.exe : Force kill process by image name
 
 start <program> : Start program or command
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 🔌 NETWORKING
 
@@ -156,7 +165,8 @@ netstat -an | find "LISTEN" : Show listening ports
 
 hostname : Show hostname
 getmac : Show MAC addresses
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 ⚙️ SYSTEM CONTROL SERVICES
 
@@ -175,7 +185,8 @@ schtasks /query : List scheduled tasks
 schtasks /query /tn <taskname> : Show specific task
 schtasks /run /tn <taskname> : Run scheduled task
 schtasks /end /tn <taskname> : Stop scheduled task
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 📦 SOFTWARE & PACKAGE OPERATIONS
 
@@ -187,7 +198,8 @@ winget upgrade --all : Upgrade all applications
 winget uninstall <pkg> : Remove application
 
 where <command> : Show command path
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 📜 LOGS & TROUBLESHOOTING
 
@@ -199,7 +211,8 @@ wevtutil qe System /c:10 /f:text : Show latest 10 System log entries
 wevtutil qe Application /c:10 /f:text : Show latest 10 Application log entries
 
 eventquery /l : List event log names
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 📂 FILE SYSTEM & PATHS
 
@@ -216,7 +229,8 @@ C:\Windows\System32 : Core Windows system executables
 C:\Program Files : 64-bit applications
 C:\Program Files (x86) : 32-bit applications
 C:\Temp or %TEMP% : Temporary files
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 🗃️ ARCHIVING
 
@@ -226,7 +240,8 @@ tar -czvf <file.tar.gz> <files> : Create compressed archive
 
 compact /c <file> : Compress file on NTFS
 compact /u <file> : Uncompress file on NTFS
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 🧰 HELP & UTILITIES
 
@@ -246,7 +261,8 @@ shutdown /s /t 0 : Shut down system
 <incomplete command><press tab> : Autocomplete file or folder
 doskey /history : Show command history
 doskey cls=cls : Create command macro for current session
-_________________________
+
+_________________________________________________________________________________________________________________________
 
 🎯 CORE COMMANDS TO PRIORITISE
 
