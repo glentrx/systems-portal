@@ -27,12 +27,16 @@ systems-portal/
 ├── style.css
 ├── script.js
 ├── data/
+│ ├── golden-path-playbook.txt
 │ ├── shell-bash-playbook.txt
 │ ├── powershell-playbook.txt
 │ └── command-prompt-playbook.txt
 ├── playbooks/
+│ ├── golden-path.html
 │ ├── shell-bash.html
 │ ├── powershell.html
 │ └── command-prompt.html
 └── README.md
+
+
 
