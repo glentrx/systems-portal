@@ -25,7 +25,7 @@ cd : Go to home directory
 cd <dir> : Change directory
 cd .. : Parent directory
 cd - : Previous directory
-_________________________
+____________________________________________________________________________________________________________________________________________________________
 
 📁 FILE & DIRECTORY OPERATIONS
 
