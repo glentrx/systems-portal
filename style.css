@@ -1,0 +1,234 @@
+/* ======================
+RESET / BASE
+====================== */
+
+* {
+box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+margin: 0;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+background-color: #f8fafc;
+color: #1f2933;
+line-height: 1.6;
+}
+
+/* ======================
+LAYOUT
+====================== */
+
+.container {
+width: min(1000px, 92%);
+margin: 0 auto;
+}
+
+/* ======================
+HEADER
+====================== */
+
+.site-header {
+padding: 48px 0 32px;
+border-bottom: 1px solid #e5e7eb;
+background-color: #ffffff;
+}
+
+.site-eyebrow {
+text-transform: uppercase;
+font-size: 0.75rem;
+letter-spacing: 0.08em;
+color: #6b7280;
+margin: 0 0 6px;
+}
+
+.site-header h1 {
+margin: 0;
+font-size: 2rem;
+font-weight: 600;
+}
+
+.site-subtitle {
+margin-top: 10px;
+color: #4b5563;
+}
+
+/* ======================
+SEARCH
+====================== */
+
+.search-wrap {
+margin-top: 20px;
+}
+
+.search-input {
+width: 100%;
+max-width: 420px;
+padding: 10px 12px;
+font-size: 0.95rem;
+border: 1px solid #d1d5db;
+border-radius: 6px;
+outline: none;
+}
+
+.search-input:focus {
+border-color: #3b82f6;
+}
+
+/* ======================
+MAIN
+====================== */
+
+.site-main {
+padding: 32px 0 48px;
+}
+
+.intro-section h2 {
+margin-bottom: 6px;
+}
+
+.intro-section p {
+margin-top: 0;
+color: #4b5563;
+}
+
+/* ======================
+ITEM CARDS
+====================== */
+
+.playbook-list {
+display: grid;
+gap: 16px;
+margin-top: 20px;
+}
+
+.playbook-card {
+display: block;
+text-decoration: none;
+color: inherit;
+background-color: #ffffff;
+padding: 18px 18px;
+border-radius: 8px;
+border: 1px solid #e5e7eb;
+transition: border 0.15s ease, transform 0.15s ease;
+}
+
+.playbook-card:hover {
+border-color: #3b82f6;
+transform: translateY(-2px);
+}
+
+.playbook-card h3 {
+margin: 6px 0 8px;
+font-size: 1.2rem;
+}
+
+.playbook-card p {
+margin: 0;
+font-size: 0.92rem;
+color: #4b5563;
+}
+
+.playbook-label {
+font-size: 0.7rem;
+text-transform: uppercase;
+color: #6b7280;
+letter-spacing: 0.05em;
+}
+
+/* ======================
+NO RESULTS
+====================== */
+
+.no-results {
+margin-top: 20px;
+color: #6b7280;
+font-size: 0.9rem;
+}
+
+.hidden {
+display: none;
+}
+
+/* ======================
+FOOTER
+====================== */
+
+.site-footer {
+border-top: 1px solid #e5e7eb;
+padding: 20px 0;
+text-align: center;
+font-size: 0.85rem;
+color: #6b7280;
+background-color: #ffffff;
+}
+
+/* ======================
+PAGE HEADER
+====================== */
+
+.page-header {
+padding: 40px 0 24px;
+border-bottom: 1px solid #e5e7eb;
+background-color: #ffffff;
+}
+
+.page-header h1 {
+margin: 0;
+font-size: 1.8rem;
+}
+
+.page-header p {
+margin-top: 8px;
+color: #4b5563;
+}
+
+.back-link {
+display: inline-block;
+margin-top: 14px;
+font-size: 0.9rem;
+text-decoration: none;
+color: #3b82f6;
+}
+
+.back-link:hover {
+text-decoration: underline;
+}
+
+.page-content {
+padding: 28px 0 48px;
+}
+
+/* ======================
+PLAYBOOK TEXT
+====================== */
+
+.playbook-text {
+white-space: pre-wrap;
+font-family: Consolas, "Courier New", monospace;
+font-size: 0.9rem;
+line-height: 1.6;
+background-color: #ffffff;
+border: 1px solid #e5e7eb;
+border-radius: 8px;
+padding: 20px;
+overflow-x: auto;
+}
+
+/* ======================
+ACCESSIBILITY
+====================== */
+
+.visually-hidden {
+position: absolute;
+width: 1px;
+height: 1px;
+padding: 0;
+margin: -1px;
+overflow: hidden;
+clip: rect(0, 0, 0, 0);
+border: 0;
+}

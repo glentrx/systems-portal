@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PowerShell Playbook | Systems Portal</title>
+<meta
+name="description"
+content="PowerShell Playbook page within the Systems Portal."
+/>
+<link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+<header class="page-header">
+<div class="container">
+<p class="site-eyebrow">Systems Portal</p>
+<h1>PowerShell Playbook</h1>
+<p>
+Object-based Windows administration reference covering system control,
+services, networking, events, scripting, and automation.
+</p>
+<a class="back-link" href="../index.html">← Back to Systems Portal</a>
+</div>
+</header>
+
+<main class="page-content">
+<div class="container">
+<pre id="playbookContent" class="playbook-text">Loading playbook...</pre>
+</div>
+</main>
+
+<script>
+fetch("../data/powershell-playbook.txt")
+.then((response) => {
+if (!response.ok) {
+throw new Error("Failed to load PowerShell Playbook.");
+}
+return response.text();
+})
+.then((text) => {
+document.getElementById("playbookContent").textContent = text;
+})
+.catch(() => {
+document.getElementById("playbookContent").textContent =
+"Unable to load PowerShell Playbook content.\n\n" +
+"Check that the file exists at:\n" +
+"../data/powershell-playbook.txt";
+});
+</script>
+</body>
+</html>

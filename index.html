@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Systems Portal</title>
+<meta
+name="description"
+content="Offline-capable static portal for accessing technical playbooks, references, notes, documents, and scripts."
+/>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="site-header">
+<div class="container">
+<p class="site-eyebrow">Systems Portal</p>
+<h1>Systems Portal</h1>
+<p class="site-subtitle">
+A clean, minimal hub for technical playbooks, references, notes,
+documents, and scripts.
+</p>
+
+<div class="search-wrap">
+<label for="playbookSearch" class="visually-hidden">Search portal items</label>
+<input
+type="text"
+id="playbookSearch"
+class="search-input"
+placeholder="Search portal items..."
+autocomplete="off"
+/>
+</div>
+</div>
+</header>
+
+<main class="site-main">
+<div class="container">
+<section class="intro-section">
+<h2>Available Items</h2>
+<p>
+Open an item below. This Systems Portal is designed to work both as a
+local offline reference and as a hosted GitHub Pages site later.
+</p>
+</section>
+
+<section class="playbook-list" id="playbookList" aria-label="Portal item list">
+<a
+class="playbook-card"
+href="playbooks/shell-bash.html"
+data-title="Shell Bash Playbook"
+data-keywords="shell bash linux rhel commands terminal playbook"
+>
+<span class="playbook-label">Playbook</span>
+<h3>Shell Bash Playbook</h3>
+<p>
+Reference for Linux and shell-based commands, troubleshooting flow,
+system checks, networking, services, logs, and utilities.
+</p>
+</a>
+
+<a
+class="playbook-card"
+href="playbooks/powershell.html"
+data-title="PowerShell Playbook"
+data-keywords="powershell windows administration objects scripting playbook"
+>
+<span class="playbook-label">Playbook</span>
+<h3>PowerShell Playbook</h3>
+<p>
+Reference for object-based Windows administration, system control,
+networking, services, events, scripting, and automation commands.
+</p>
+</a>
+
+<a
+class="playbook-card"
+href="playbooks/command-prompt.html"
+data-title="Command Prompt Playbook"
+data-keywords="cmd command prompt windows legacy troubleshooting playbook"
+>
+<span class="playbook-label">Playbook</span>
+<h3>Command Prompt Playbook</h3>
+<p>
+Reference for classic Windows command-line troubleshooting, file
+operations, networking checks, services, tasks, and utilities.
+</p>
+</a>
+</section>
+
+<p id="noResultsMessage" class="no-results hidden" aria-live="polite">
+No portal items matched your search.
+</p>
+</div>
+</main>
+
+<footer class="site-footer">
+<div class="container">
+<p>Local-first static systems portal</p>
+</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

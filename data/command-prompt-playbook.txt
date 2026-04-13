@@ -1,0 +1,315 @@
+COMMAND PROMPT PLAYBOOK
+
+======================
+QUICK MODEL FOR TROUBLESHOOTING
+1. Navigate → cd, dir
+2. Inspect → type, more, findstr
+3. Check system → systeminfo, tasklist, hostname
+4. Check network → ipconfig, ping, netstat
+5. Check services / tasks → sc, tasklist, taskkill
+6. Check output / logs → type, eventquery, wevtutil
+======================
+
+💻 NAVIGATION & DIRECTORY MANAGEMENT
+
+cd : Show current directory
+cd <dir> : Change directory
+cd .. : Parent directory
+cd /d <dir> : Change drive and directory together
+
+dir : List current directory
+dir <dir> : List specific directory
+dir /a : Include hidden and system files
+dir /b : Bare format
+dir /o : Sort output
+dir /s : List recursively
+
+<drive>: : Switch drive, e.g. C:
+_________________________
+
+📁 FILE & DIRECTORY OPERATIONS
+
+mkdir <dir> : Make directory
+md <dir> : Alias for mkdir
+
+rmdir <dir> : Remove empty directory
+rmdir /s <dir> : Remove directory and contents
+rmdir /s /q <dir> : Quiet recursive remove
+
+type nul > <file> : Create empty file
+
+copy <src> <dest> : Copy file
+xcopy <src> <dest> : Copy files and directories
+robocopy <src> <dest> : Robust copy for files and directories
+
+move <src> <dest> : Move / rename file or directory
+ren <old> <new> : Rename file or directory
+
+del <file> : Remove file
+del /q <file> : Quiet delete
+erase <file> : Alias for del
+
+if exist <path> : Check whether file or directory exists
+_________________________
+
+📄 VIEWING & SEARCHING FILES
+
+type <file> : Display file content
+more <file> : Scrollable file view
+notepad <file> : Open file in Notepad
+
+find "<pattern>" <file> : Search text
+find /i "<pattern>" <file> : Case-insensitive search
+findstr "<pattern>" <file> : Search text with more options
+findstr /i "<pattern>" <file> : Case-insensitive search
+findstr /s "<pattern>" * : Recursive search
+
+sort <file> : Sort lines
+fc <file1> <file2> : Compare two files
+_________________________
+
+🔐 PERMISSIONS & OWNERSHIP
+
+attrib <file> : View file attributes
+attrib +r <file> : Set read-only attribute
+attrib -r <file> : Remove read-only attribute
+attrib +h <file> : Set hidden attribute
+attrib -h <file> : Remove hidden attribute
+
+icacls <path> : View / modify NTFS permissions
+icacls <path> /grant <user>:F : Grant full control
+icacls <path> /inheritance:e : Enable inheritance
+icacls <path> /inheritance:d : Disable inheritance
+
+takeown /f <path> : Take ownership of file or folder
+_________________________
+
+👤 USERS & IDENTITY
+
+whoami : Current user
+whoami /groups : Current user group membership
+whoami /priv : Current user privileges
+
+net user : Show local users
+net user <user> : Show local user details
+net user <user> <password> /add : Create local user
+net user <user> /delete : Delete local user
+
+net localgroup : Show local groups
+net localgroup <group> : Show group members
+net localgroup <group> <user> /add : Add user to local group
+net localgroup <group> <user> /delete : Remove user from local group
+
+runas /user:<user> <command> : Run command as another user
+_________________________
+
+🔎 SYSTEM INFORMATION
+
+hostname : Show hostname
+ver : Show Windows version
+systeminfo : Show detailed system information
+
+date /t : Current date
+time /t : Current time
+
+tasklist : Show running processes
+tasklist /svc : Show processes with services
+tasklist /fi "IMAGENAME eq <name>" : Filter process list
+
+driverquery : Show installed drivers
+wmic os get caption,version : Show OS information
+wmic computersystem get model,name,manufacturer : Show system model information
+_________________________
+
+🧠 PROCESS MANAGEMENT
+
+tasklist : Show running processes
+tasklist | findstr <process> : Search for process
+
+taskkill /pid <pid> : Kill process by PID
+taskkill /f /pid <pid> : Force kill process by PID
+taskkill /im <name>.exe : Kill process by image name
+taskkill /f /im <name>.exe : Force kill process by image name
+
+start <program> : Start program or command
+_________________________
+
+🔌 NETWORKING
+
+ipconfig : Show IP configuration
+ipconfig /all : Show full IP configuration
+ipconfig /release : Release DHCP lease
+ipconfig /renew : Renew DHCP lease
+ipconfig /flushdns : Clear DNS resolver cache
+ipconfig /displaydns : Show DNS resolver cache
+
+ping <host> : Test connectivity
+tracert <host> : Trace network path
+pathping <host> : Trace path with packet loss statistics
+
+nslookup <host> : DNS lookup
+arp -a : Show ARP table
+route print : Show routing table
+
+netstat -ano : Show network connections with PID
+netstat -an | find "LISTEN" : Show listening ports
+
+hostname : Show hostname
+getmac : Show MAC addresses
+_________________________
+
+⚙️ SYSTEM CONTROL SERVICES
+
+sc query : Show services
+sc query <svc> : Show service status
+sc start <svc> : Start service
+sc stop <svc> : Stop service
+sc qc <svc> : Show service configuration
+
+net start : Show started services
+net start <svc> : Start service
+net stop <svc> : Stop service
+
+schtasks : Show scheduled tasks
+schtasks /query : List scheduled tasks
+schtasks /query /tn <taskname> : Show specific task
+schtasks /run /tn <taskname> : Run scheduled task
+schtasks /end /tn <taskname> : Stop scheduled task
+_________________________
+
+📦 SOFTWARE & PACKAGE OPERATIONS
+
+winget list : Show installed applications known to winget
+winget search <term> : Search application
+winget install <pkg> : Install application
+winget upgrade : Show available upgrades
+winget upgrade --all : Upgrade all applications
+winget uninstall <pkg> : Remove application
+
+where <command> : Show command path
+_________________________
+
+📜 LOGS & TROUBLESHOOTING
+
+type <file.log> : View log file
+more <file.log> : Scroll log file
+
+wevtutil el : List event logs
+wevtutil qe System /c:10 /f:text : Show latest 10 System log entries
+wevtutil qe Application /c:10 /f:text : Show latest 10 Application log entries
+
+eventquery /l : List event log names
+_________________________
+
+📂 FILE SYSTEM & PATHS
+
+echo %CD% : Show current directory
+echo %PATH% : Show PATH variable
+set : Show environment variables
+set <VAR>=<value> : Set environment variable for current session
+
+dir /a : Show hidden and system files
+
+C:\Users : User profiles
+C:\Windows : Windows system files
+C:\Windows\System32 : Core Windows system executables
+C:\Program Files : 64-bit applications
+C:\Program Files (x86) : 32-bit applications
+C:\Temp or %TEMP% : Temporary files
+_________________________
+
+🗃️ ARCHIVING
+
+tar -cvf <file.tar> <files> : Create archive
+tar -xvf <file.tar> : Extract archive
+tar -czvf <file.tar.gz> <files> : Create compressed archive
+
+compact /c <file> : Compress file on NTFS
+compact /u <file> : Uncompress file on NTFS
+_________________________
+
+🧰 HELP & UTILITIES
+
+help : List commands
+help <command> : Show help for command
+<command> /? : Quick help
+
+where <command> : Show command path
+echo <text> : Print text
+echo %<VAR>% : Show environment variable
+
+cls : Clear terminal
+exit : Exit command prompt
+shutdown /r /t 0 : Reboot system
+shutdown /s /t 0 : Shut down system
+
+<incomplete command><press tab> : Autocomplete file or folder
+doskey /history : Show command history
+doskey cls=cls : Create command macro for current session
+_________________________
+
+🎯 CORE COMMANDS TO PRIORITISE
+
+NAVIGATION & DIRECTORY MANAGEMENT
+dir # list files and folders
+cd <dir> # change directory
+cd .. # go to parent directory
+
+FILE & DIRECTORY OPERATIONS
+mkdir <dir> # make directory
+rmdir /s <dir> # remove directory and contents
+copy <src> <dest> # copy file
+move <src> <dest> # move / rename file or directory
+del <file> # remove file
+
+VIEWING & SEARCHING FILES
+type <file> # display file content
+more <file> # scroll file content
+findstr "<pattern>" <file> # search text
+fc <file1> <file2> # compare files
+
+USERS & IDENTITY
+whoami # current user
+net user # show local users
+net localgroup # show local groups
+
+SYSTEM INFORMATION
+systeminfo # detailed system info
+hostname # show hostname
+tasklist # process list
+driverquery # installed drivers
+
+PROCESS MANAGEMENT
+tasklist # show running processes
+taskkill /pid <pid> # terminate process by PID
+taskkill /f /im <name>.exe # force terminate process by name
+
+NETWORKING
+ipconfig /all # full network config
+ping <host> # test connectivity
+netstat -ano # show connections and PIDs
+nslookup <host> # DNS lookup
+tracert <host> # trace network path
+
+SYSTEM CONTROL SERVICES
+sc query # show services
+sc start <svc> # start service
+sc stop <svc> # stop service
+schtasks /query # show scheduled tasks
+
+SOFTWARE & PACKAGE OPERATIONS
+winget list # list applications
+winget install <pkg> # install application
+where <command> # show command path
+
+LOGS & TROUBLESHOOTING
+type <file.log> # view log file
+wevtutil qe System /c:10 /f:text # view recent System log entries
+
+HELP & UTILITIES
+help <command> # help
+<command> /? # quick help
+cls # clear terminal
+exit # exit command prompt
+shutdown /r /t 0 # reboot
+<incomplete command><press tab> # autocomplete file or folder

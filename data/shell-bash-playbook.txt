@@ -1,0 +1,369 @@
+SHELL BASH PLAYBOOK
+
+======================
+QUICK MODEL FOR TROUBLESHOOTING
+1. Navigate → ls, cd, pwd
+2. Inspect → cat, less, grep
+3. Check system → df, free, uptime
+4. Check network → ip, ping, ss
+5. Check services → systemctl
+6. Check logs → journalctl
+======================
+
+💻 NAVIGATION & DIRECTORY MANAGEMENT
+
+pwd : Show current directory
+ls : List current directory
+ls <dir> : List specific directory
+ls -l : Detailed list, l stands for long
+ls -a : Include hidden files
+ls -la : Detailed list including hidden files
+ls -lh : Human-readable sizes
+Arguments like -l -h -a can be combined, e.g. ls -lha
+
+cd : Go to home directory
+cd <dir> : Change directory
+cd .. : Parent directory
+cd - : Previous directory
+_________________________
+
+📁 FILE & DIRECTORY OPERATIONS
+
+mkdir <dir> : Make directory
+mkdir -p <dir> : Make nested directories, directory is made if it does not exist, does not fail if already exists
+mkdir -pv <dir> : View result for -p
+
+rmdir <dir> : Remove empty directory
+
+touch <file> : Create empty file / update timestamp
+
+cp <src> <dest> : Copy file
+cp -r <src> <dest> : Copy directory recursively
+
+mv <src> <dest> : Move / rename file or directory
+
+rm <file> : Remove file
+rm -r <dir> : Remove directory
+rm -rf <dir> : Force remove directory
+rm -i <file> : Interactive mode to prompt before removal
+
+Test-Path equivalent → test -e <path> : Check if file or directory exists
+_________________________
+
+📄 VIEWING & SEARCHING FILES
+
+sed : Stream editor for parsing and transforming text (non-interactive)
+cat <file> : Display file content
+vi <file> : Open file in vi editor (interactive editor)
+nano <file> : Open file in nano editor (simpler than vi)
+
+i : Insert mode in vi
+dd : Delete line in vi
+<esc> : Exit insert mode in vi
+:wq! : Write, save, quit and force in vi
+:q! : Quit without saving and force in vi
+
+less <file> : Scrollable file view
+head -n <n> <file> : First N lines
+tail -n <n> <file> : Last N lines
+tail -f <file> : Follow live logs
+
+wc <file> : Count lines, words, bytes
+wc -l <file> : Count lines only
+
+cut -d '<delimiter>' -f <field> <file> : Extract fields from text
+sort <file> : Sort lines
+uniq : Remove duplicate lines
+sort <file> | uniq : Unique sorted lines
+
+awk '{print $1}' <file> : Extract columns from text
+
+grep <pattern> <file> : Search text
+grep -i <pattern> <file> : Case-insensitive
+grep -r <pattern> <dir> : Recursive search
+_________________________
+
+🔐 PERMISSIONS & OWNERSHIP
+
+ls -l : View file permissions in detail
+
+chmod <mode> <file> : Change permissions (e.g. 755)
+chmod +x <file> : Make executable
+
+chown <user> <file> : Change owner
+chown <user>:<group> <file> : Change owner + group
+chgrp <group> <file> : Change group ownership
+
+umask : Show/set default permissions
+_________________________
+
+👤 USERS & IDENTITY
+
+whoami : Current user
+who : Logged-in users
+
+id : Show UID/GID
+groups : Show group membership
+
+useradd <user> : Create user
+userdel <user> : Delete user
+groupadd <group> : Create group
+groupdel <group> : Delete group
+
+passwd <user> : Set/change password
+
+su : Switch user
+su - : Switch user with full environment
+sudo <command> : Run command as root
+_________________________
+
+🔎 SYSTEM INFORMATION
+
+uname -a : System/kernel info
+hostname : Show hostname
+hostnamectl : System + hostname info
+history : Show command history
+
+date : Current date/time
+uptime : System uptime + load
+uptime -p : Pretty uptime format
+
+df -h : Filesystem disk usage
+df -i : Show inode usage
+du -sh <path> : Directory size
+
+free -h : Memory usage
+
+lscpu : CPU information
+lsblk : List block devices
+blkid : Show filesystem UUIDs and types
+
+ps aux : Process list
+ps -ef : Alternative full process list format
+top : Real-time processes
+htop : Enhanced process viewer (if installed)
+_________________________
+
+🧠 PROCESS MANAGEMENT
+
+ps aux : Show all running processes
+ps aux | grep <process> : Search for process
+
+kill <pid> : Kill process by PID
+kill -9 <pid> : Force kill process
+
+pkill <name> : Kill process by name
+pgrep <name> : Find process ID by name
+
+jobs : Show background jobs
+bg : Resume job in background
+fg : Bring job to foreground
+_________________________
+
+🔌 NETWORKING
+
+ip addr : Show IP addresses
+ip a : Short form of ip addr
+ip addr show : Explicit form of showing addresses
+ip route : Show routing table
+ip link : Show physical port connection
+
+hostname -I : Show IP addresses quickly
+
+ping <host> : Test connectivity
+
+ss -tuln : Show listening ports
+ss -tulnp : Show listening ports with process info
+
+curl <url> : Fetch data from URL
+wget <url> : Download file from URL
+
+traceroute <host> : Trace network path
+tracepath <host> : Alternative to traceroute
+
+nslookup <host> : DNS lookup
+dig <host> : Detailed DNS query
+
+nmtui : Open NetworkManager text UI
+_________________________
+
+⚙️ SYSTEM CONTROL SERVICES
+
+systemctl : Access systemd control services and units
+systemctl status <svc> : Service status
+systemctl start <svc> : Start service
+systemctl stop <svc> : Stop service
+systemctl restart <svc> : Restart service
+systemctl enable <svc> : Enable at boot
+systemctl disable <svc> : Disable at boot
+
+systemctl daemon-reload : Reload systemd configs
+systemctl list-units --type=service : List active services
+systemctl list-unit-files : List all services
+_________________________
+
+📦 PACKAGE MANAGEMENT
+
+dnf remove <pkg> : Remove package
+dnf search <term> : Search package
+dnf info <pkg> : Package details
+dnf history : Task history
+dnf list installed : List installed packages
+dnf clean all : Clear cache
+dnf makecache : Refresh package metadata cache
+dnf install <pkg> : Install package
+dnf update : Update packages
+
+dnf check-update : Check for updates
+dnf autoremove : Remove unused packages
+dnf repolist : Show repositories
+
+yum install/update : Legacy compatibility
+_________________________
+
+📜 LOGS & TROUBLESHOOTING
+
+journalctl : View logs
+journalctl -xe : Recent errors
+journalctl -u <svc> : Logs for service
+journalctl -f : Follow logs live
+journalctl -n <n> : Last N log lines
+journalctl --since "1 hour ago" : Logs from time range
+journalctl -b : Logs since last boot
+
+dmesg : Kernel logs
+dmesg | tail : Recent kernel logs
+_________________________
+
+📂 FILE SYSTEM & LINKS
+
+ln -s <target> <link> : Create symbolic link
+
+mount : Show mounted filesystems
+mount <device> <dir> : Mount device
+umount <dir> : Unmount device
+
+/home : where personal files live
+/etc : Stands for Extended Text Configurations
+/var : Variable data (logs, caches)
+/var/log : Logs location
+/usr : User programs
+/bin : Essential binaries
+/usr/share : Shared resources
+/tmp : Temporary files
+/root : Root home directory
+/boot : Kernel and boot files
+/mnt : Temporary mount points
+/run : Runtime system info
+/dev /proc /sys : System internals
+_________________________
+
+🗃️ ARCHIVING
+
+tar -cvf <file.tar> <files> : Create archive
+tar -xvf <file.tar> : Extract archive
+tar -czvf <file.tar.gz> <files> : Create compressed archive
+tar -tvf <file.tar> : View archive contents
+_________________________
+
+🧰 HELP & UTILITIES
+
+man <command> : Manual page
+/<keyword> : Search in manual
+<command> --help : Quick help
+which <command> : Show command path
+
+history | grep <command> : Search history
+
+alias : Show aliases
+alias ll='ls -l' : Create alias
+
+env : Show environment variables
+export VAR=value : Set environment variable
+
+echo <text> : Print text
+echo $<VAR> : Show variable
+
+watch <command> : Run command repeatedly
+watch -n 1 <command> : Run every 1 second
+
+time <command> : Measure execution time
+
+clear : Clear terminal
+exit : Exit shell
+reboot : Reboot
+
+<incomplete command><press tab> : Autocomplete command
+<command><press tab><press tab> : View subcommands
+_________________________
+
+🎯 CORE COMMANDS TO PRIORITISE
+
+NAVIGATION & DIRECTORY MANAGEMENT
+ls # list files
+cd # change directory
+pwd # show current directory
+
+FILE & DIRECTORY OPERATIONS
+mkdir <dir> # make directory
+rmdir <dir> # remove directory
+mv <src> <dest> # move/rename file/directory
+cp <src> <dest> # copy file
+rm <file> # remove file
+
+VIEWING & SEARCHING FILES
+sed # stream editor
+cat # display file
+vi # edit file
+:wq! # write, quit and force
+less # scroll file
+grep # search text
+tail -f # follow logs
+
+PROCESS MANAGEMENT
+ps aux # list all running processes
+kill <pid> # terminate process by process ID
+
+PERMISSIONS & OWNERSHIP
+chmod <mode> <file> # change permissions (e.g. 755)
+
+USERS & IDENTITY
+whoami # current user
+who # logged-in users
+
+SYSTEM INFORMATION
+df -h # disk usage
+free -h # memory usage
+uptime # system uptime
+history # command history
+
+NETWORKING
+ip addr # show ip addresses
+ping # test connectivity
+ss -tuln # show listening ports
+nmtui # network manager UI
+
+SYSTEM CONTROL SERVICES
+systemctl # system control services
+systemctl status # check service
+systemctl start # start service
+
+PACKAGE MANAGEMENT
+dnf install # install package
+dnf clean all # clear cache
+dnf update # update packages
+dnf list installed # list installed
+
+LOGS & TROUBLESHOOTING
+journalctl # view logs
+dmesg # view kernel / system boot and hardware logs
+
+HELP & UTILITIES
+man <command> # manual
+/<keyword> # search in manual
+which <command> # show command path
+clear # clear terminal
+exit # exit terminal
+reboot # reboot
+<incomplete command><press tab>
+# autocomplete command
