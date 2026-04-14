@@ -203,6 +203,25 @@ padding: 28px 0 48px;
 }
 
 /* ======================
+BREAD CRUMB
+====================== */
+
+.breadcrumb {
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+  color: #6b7280;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #3b82f6;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* ======================
 PLAYBOOK TEXT
 ====================== */
 

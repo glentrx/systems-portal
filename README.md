@@ -1,6 +1,6 @@
 # Systems Portal
 
-A local-first static portal for accessing technical playbooks, references, notes, documents, and scripts.
+A one-stop minimal hub for accessing technical playbooks, scripts, references, documents, and notes.
 
 ## Purpose
 
@@ -14,10 +14,9 @@ It is intended to store:
 - scripts
 - assets
 
-The site can be used in 3 ways:
-- as a local offline portal
+The site can potentially be used in 2 ways:
 - as a GitHub Pages site
-- as a future packaged application if completed
+- as a future packaged application once completed
 
 ## Current Structure
 
@@ -26,17 +25,16 @@ systems-portal/
 ├── index.html
 ├── style.css
 ├── script.js
+├── README.md
 ├── data/
 │ ├── golden-path-playbook.txt
 │ ├── shell-bash-playbook.txt
 │ ├── powershell-playbook.txt
 │ └── command-prompt-playbook.txt
-├── playbooks/
-│ ├── golden-path.html
-│ ├── shell-bash.html
-│ ├── powershell.html
-│ └── command-prompt.html
-└── README.md
-
-
+└── playbooks/
+  ├── index.html
+  ├── golden-path.html
+  ├── shell-bash.html
+  ├── powershell.html
+  └── command-prompt.html
 
