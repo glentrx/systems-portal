@@ -1,0 +1,57 @@
+QUICK REFERENCE
+
+=====================
+CORE TROUBLESHOOTING FLOW
+=====================
+
+1. System → df, free, uptime  
+2. Network → ip, ping, route  
+3. Services → systemctl, ss  
+4. Logs → journalctl  
+
+=====================
+
+🖥️ SYSTEM
+
+df -h        : Check disk usage  
+free -h      : Check memory  
+uptime       : System uptime  
+
+_________________________
+
+🔌 NETWORK
+
+ip addr      : Show IP  
+ip route     : Show routing  
+
+ping <host>  : Test connectivity  
+
+_________________________
+
+⚙️ SERVICES
+
+systemctl status <svc> : Service status  
+systemctl start <svc>  : Start service  
+
+ss -tuln               : Check listening ports  
+
+_________________________
+
+📜 LOGS
+
+journalctl       : View logs  
+journalctl -xe   : Recent errors  
+journalctl -u    : Service logs  
+
+_________________________
+
+📦 PACKAGES
+
+dnf list installed : Installed packages  
+dnf install        : Install package  
+
+_________________________
+
+🎯 QUICK CHECK MODEL
+
+System → Network → Services → Logs

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Validation Checklist | Systems Portal</title>
+  <meta
+    name="description"
+    content="Validation Checklist page within the Systems Portal."
+  />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a> &gt;
+        <a href="index.html">Checklists</a> &gt;
+        <span>Validation Checklist</span>
+      </nav>
+
+      <p class="site-eyebrow">Systems Portal</p>
+      <h1>Validation Checklist</h1>
+      <p>
+        Focused validation checklist for system, network, service, and log checks.
+      </p>
+      <a class="back-link" href="index.html">← Back to Checklists</a>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <div class="container">
+      <pre id="playbookContent" class="playbook-text">Loading checklist...</pre>
+    </div>
+  </main>
+
+  <script>
+    fetch("../data/checklists/validation-checklist.txt")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed to load Validation Checklist.");
+        }
+        return response.text();
+      })
+      .then((text) => {
+        document.getElementById("playbookContent").textContent = text;
+      })
+      .catch(() => {
+        document.getElementById("playbookContent").textContent =
+          "Unable to load Validation Checklist content.\n\n" +
+          "Check that the file exists at:\n" +
+          "../data/checklists/validation-checklist.txt";
+      });
+  </script>
+</body>
+</html>

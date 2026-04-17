@@ -1,0 +1,76 @@
+VALIDATION CHECKLIST
+
+=====================
+SYSTEM VALIDATION (STAGE 10)
+=====================
+
+🖥️ SYSTEM CHECKS
+
+[ ] Disk usage verified (df -h)  
+[ ] Memory usage verified (free -h)  
+[ ] System uptime checked  
+
+[ ] No abnormal resource usage  
+
+_________________________
+
+🔌 NETWORK CHECKS
+
+[ ] IP address verified (ip addr)  
+[ ] Routing table verified (ip route)  
+
+[ ] Gateway reachable  
+[ ] Internal connectivity verified  
+
+[ ] DNS resolution working  
+
+_________________________
+
+⚙️ SERVICE CHECKS
+
+[ ] Required services running  
+[ ] Services enabled at boot  
+
+[ ] Service status verified (systemctl status)  
+[ ] Required ports listening (ss -tuln)  
+
+_________________________
+
+📦 PACKAGE / ROLE CHECKS
+
+[ ] Required packages installed  
+[ ] Required roles/features present  
+
+[ ] No missing dependencies  
+
+_________________________
+
+🔐 SECURITY CHECKS
+
+[ ] Certificates installed correctly  
+[ ] Certificate chain trusted  
+
+[ ] Authentication working (if domain joined)  
+
+_________________________
+
+📜 LOG CHECKS
+
+[ ] System logs reviewed (journalctl)  
+[ ] No critical or recurring errors  
+
+[ ] Service-specific logs reviewed  
+
+_________________________
+
+🧪 FINAL VALIDATION
+
+[ ] System reachable  
+[ ] Services operational  
+[ ] No critical errors  
+
+[ ] System meets deployment requirements  
+
+=====================
+VALIDATION COMPLETE
+=====================

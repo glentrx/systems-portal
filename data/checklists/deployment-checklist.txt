@@ -1,0 +1,147 @@
+DEPLOYMENT CHECKLIST
+
+=====================
+INFRASTRUCTURE LIFECYCLE: DAY 1 DEPLOYMENT
+=====================
+
+🧭 PRE-DEPLOYMENT
+
+[ ] Deployment documents reviewed  
+[ ] Hostname confirmed  
+[ ] IP plan confirmed  
+[ ] Roles and system purpose confirmed  
+
+[ ] ISO files prepared  
+[ ] Offline repositories prepared  
+[ ] Certificates prepared (if required)  
+
+[ ] No IP conflicts identified  
+[ ] Required resources accessible  
+
+_________________________
+
+🖥️ HARDWARE / HOST PREPARATION
+
+[ ] Server / VM powered on  
+[ ] Console access available (iDRAC / hypervisor)  
+
+[ ] CPU, memory, disks detected  
+[ ] Network interfaces visible  
+
+[ ] BIOS / virtualization settings configured  
+[ ] Boot order configured  
+
+_________________________
+
+💿 OS INSTALLATION
+
+[ ] OS installation completed (RHEL / Windows)  
+[ ] Disk partitions configured correctly  
+
+[ ] System boots successfully  
+[ ] No installation errors  
+
+_________________________
+
+⚙️ BASE SYSTEM CONFIGURATION
+
+[ ] Hostname configured  
+[ ] Timezone configured  
+[ ] Time synchronization configured  
+
+[ ] Required users created (if applicable)  
+
+[ ] Hostname correctly applied  
+[ ] System time is consistent  
+
+_________________________
+
+🔌 NETWORK CONFIGURATION
+
+[ ] IP address configured  
+[ ] Subnet configured  
+[ ] Gateway configured  
+[ ] DNS configured  
+
+[ ] Network interface is up  
+[ ] Gateway reachable  
+[ ] DNS resolution working  
+
+_________________________
+
+📦 OFFLINE REPOSITORY SETUP
+
+[ ] Repository mounted (ISO / directory)  
+[ ] Repository path configured  
+
+[ ] Repository accessible  
+[ ] Package list retrievable  
+[ ] No errors when querying repository  
+
+_________________________
+
+🧩 ROLE / FEATURE INSTALLATION
+
+[ ] Required packages installed  
+[ ] Required roles/features installed  
+
+[ ] Installation completed without errors  
+[ ] Required services / binaries present  
+
+_________________________
+
+🏢 DOMAIN / IDENTITY INTEGRATION
+
+[ ] Domain join completed (if required)  
+[ ] DNS resolution for domain working  
+[ ] Authentication test successful  
+
+[ ] Time synchronised with domain  
+
+_________________________
+
+🔐 SECURITY / CERTIFICATE SETUP
+
+[ ] Certificates installed  
+[ ] Certificate chain configured  
+
+[ ] Certificate trusted  
+[ ] Services recognise certificate  
+
+_________________________
+
+⚙️ SERVICE CONFIGURATION
+
+[ ] Services configured  
+[ ] Services started  
+
+[ ] Services enabled at boot  
+[ ] Required ports listening  
+
+_________________________
+
+🧪 VALIDATION
+
+[ ] Disk usage checked  
+[ ] Memory usage checked  
+
+[ ] Network connectivity verified  
+[ ] Required services running  
+
+[ ] No critical errors in logs  
+
+_________________________
+
+📄 DOCUMENTATION & HANDOVER
+
+[ ] Hostname recorded  
+[ ] IP address recorded  
+[ ] Roles recorded  
+[ ] Configuration documented  
+
+[ ] Deployment workbook updated  
+[ ] Handover completed  
+
+=====================
+CHECKLIST COMPLETE
+=====================
