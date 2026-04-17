@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dependency Mapping | Systems Portal</title>
+  <meta
+    name="description"
+    content="Dependency Mapping page within the Systems Portal."
+  />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a> &gt;
+        <a href="index.html">Runbooks</a> &gt;
+        <span>Dependency Mapping</span>
+      </nav>
+
+      <p class="site-eyebrow">Systems Portal</p>
+      <h1>Dependency Mapping</h1>
+      <p>
+        Deployment dependency flow showing upstream requirements, sequencing relationships, and common blockers.
+      </p>
+      <a class="back-link" href="index.html">← Back to Runbooks</a>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <div class="container">
+      <pre id="playbookContent" class="playbook-text">Loading runbook...</pre>
+    </div>
+  </main>
+
+  <script>
+    fetch("../data/runbooks/dependency-mapping.txt")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed to load Dependency Mapping.");
+        }
+        return response.text();
+      })
+      .then((text) => {
+        document.getElementById("playbookContent").textContent = text;
+      })
+      .catch(() => {
+        document.getElementById("playbookContent").textContent =
+          "Unable to load Dependency Mapping content.\n\n" +
+          "Check that the file exists at:\n" +
+          "../data/runbooks/dependency-mapping.txt";
+      });
+  </script>
+</body>
+</html>
