@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acceptance Criteria | Systems Portal</title>
+  <meta
+    name="description"
+    content="Acceptance Criteria page within the Systems Portal."
+  />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a> &gt;
+        <a href="index.html">Architecture</a> &gt;
+        <span>Acceptance Criteria</span>
+      </nav>
+
+      <p class="site-eyebrow">Systems Portal</p>
+      <h1>Acceptance Criteria</h1>
+      <p>
+        Deployment acceptance conditions for confirming that the intended system has been delivered successfully.
+      </p>
+      <a class="back-link" href="index.html">← Back to Architecture</a>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <div class="container">
+      <pre id="playbookContent" class="playbook-text">Loading architecture item...</pre>
+    </div>
+  </main>
+
+  <script>
+    fetch("../data/architecture/acceptance-criteria.txt")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed to load Acceptance Criteria.");
+        }
+        return response.text();
+      })
+      .then((text) => {
+        document.getElementById("playbookContent").textContent = text;
+      })
+      .catch(() => {
+        document.getElementById("playbookContent").textContent =
+          "Unable to load Acceptance Criteria content.\n\n" +
+          "Check that the file exists at:\n" +
+          "../data/architecture/acceptance-criteria.txt";
+      });
+  </script>
+</body>
+</html>

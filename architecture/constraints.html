@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Environment Constraints | Systems Portal</title>
+  <meta
+    name="description"
+    content="Environment Constraints page within the Systems Portal."
+  />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a> &gt;
+        <a href="index.html">Architecture</a> &gt;
+        <span>Environment Constraints</span>
+      </nav>
+
+      <p class="site-eyebrow">Systems Portal</p>
+      <h1>Environment Constraints</h1>
+      <p>
+        Deployment environment limitations affecting connectivity, resources, network design, security, and package management.
+      </p>
+      <a class="back-link" href="index.html">← Back to Architecture</a>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <div class="container">
+      <pre id="playbookContent" class="playbook-text">Loading architecture item...</pre>
+    </div>
+  </main>
+
+  <script>
+    fetch("../data/architecture/environment-constraints.txt")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed to load Environment Constraints.");
+        }
+        return response.text();
+      })
+      .then((text) => {
+        document.getElementById("playbookContent").textContent = text;
+      })
+      .catch(() => {
+        document.getElementById("playbookContent").textContent =
+          "Unable to load Environment Constraints content.\n\n" +
+          "Check that the file exists at:\n" +
+          "../data/architecture/environment-constraints.txt";
+      });
+  </script>
+</body>
+</html>
