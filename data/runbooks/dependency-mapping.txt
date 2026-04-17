@@ -1,0 +1,137 @@
+DEPENDENCY MAPPING
+
+=====================
+DAY 1 DEPLOYMENT DEPENDENCIES
+=====================
+
+PURPOSE
+Map key deployment dependencies so that activities are carried out in the correct order.
+=====================
+
+🧭 CORE PRINCIPLE
+
+Upstream dependencies must be confirmed before dependent activities begin.
+
+=====================
+DEPENDENCY FLOW
+=====================
+
+1. Deployment Requirements
+   ↓
+2. Host / Platform Availability
+   ↓
+3. OS Installation
+   ↓
+4. Base Configuration
+   ↓
+5. Network Configuration
+   ↓
+6. Repository / Package Source Availability
+   ↓
+7. Role / Feature Installation
+   ↓
+8. Identity / Domain Integration
+   ↓
+9. Security / Certificate Setup
+   ↓
+10. Service Configuration
+   ↓
+11. Validation
+   ↓
+12. Documentation & Handover
+
+=====================
+KEY DEPENDENCIES
+=====================
+
+📄 Requirements
+Needed before:
+• Host preparation
+• Network planning
+• Role installation
+• Validation criteria
+
+_________________________
+
+🖥️ Host / Platform Availability
+Needed before:
+• OS installation
+• Base configuration
+
+_________________________
+
+💿 Operating System Installation
+Needed before:
+• Hostname / time configuration
+• Network configuration
+• Package installation
+• Domain integration
+
+_________________________
+
+🔌 Network Configuration
+Needed before:
+• Repository access
+• Domain integration
+• Service validation
+• Some certificate and identity functions
+
+_________________________
+
+📦 Repository / Package Source
+Needed before:
+• Role / feature installation
+• Some service dependencies
+
+_________________________
+
+🏢 DNS / Identity Services
+Needed before:
+• Domain join
+• Authentication validation
+• Some service integrations
+
+_________________________
+
+⏰ Time Synchronisation
+Needed before:
+• Domain integration
+• Authentication reliability
+• Certificate-related trust checks
+
+_________________________
+
+🔐 Certificates / Trust
+Needed before:
+• Secure services
+• Trusted communications
+• Some application integrations
+
+_________________________
+
+⚙️ Service Configuration
+Needed before:
+• Validation
+• Handover
+
+_________________________
+
+🧪 Validation
+Needed before:
+• Handover
+• Acceptance
+
+=====================
+COMMON BLOCKERS
+=====================
+
+• IP plan not confirmed
+• Repository not accessible
+• DNS not resolving required hosts
+• Time not synchronised
+• Certificates unavailable
+• Required credentials missing
+
+=====================
+DEPENDENCY REVIEW COMPLETE
+=====================

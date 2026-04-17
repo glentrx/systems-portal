@@ -1,0 +1,59 @@
+CHANGE IMPACT ASSESSMENT
+
+=====================
+DEPLOYMENT CHANGE ANALYSIS
+=====================
+
+PURPOSE
+Evaluate the potential impact of configuration or deployment changes.
+=====================
+
+🧭 CHANGE DESCRIPTION
+
+Describe the change being applied:
+
+_________________________
+
+🔍 IMPACT ANALYSIS
+
+Potential impacts:
+• System behaviour  
+• Service availability  
+• Integration points  
+
+_________________________
+
+🔗 DEPENDENCIES
+
+Identify affected components:
+• Services  
+• Network  
+• External systems  
+
+_________________________
+
+⚠️ RISK LEVEL
+
+[ ] Low  
+[ ] Medium  
+[ ] High  
+
+_________________________
+
+🛠️ MITIGATION
+
+Define mitigation steps:
+• Validation steps  
+• Rollback plan  
+
+_________________________
+
+🎯 DECISION
+
+[ ] Proceed  
+[ ] Proceed with caution  
+[ ] Do not proceed  
+
+=====================
+ASSESSMENT COMPLETE
+=====================

@@ -1,0 +1,151 @@
+AUTOMATION STRATEGY
+
+=====================
+DAY 1 DEPLOYMENT
+=====================
+
+PURPOSE
+Identify where automation can support repeatability, reduce manual effort, and lower deployment risk.
+=====================
+
+🧭 AUTOMATION PRINCIPLES
+
+• Start with validation before configuration
+• Prefer low-risk repeatable tasks first
+• Keep scripts readable and modular
+• Validate every automated action
+
+=====================
+AUTOMATION LAYERS
+=====================
+
+1. Validation automation
+2. Information gathering
+3. Baseline configuration
+4. Deployment support
+5. Integration support
+
+=====================
+AUTOMATION OPPORTUNITIES BY STAGE
+=====================
+
+⚙️ Base Configuration
+
+Possible Automation:
+• Hostname configuration
+• Timezone configuration
+• Time synchronisation configuration
+• User creation where standardised
+
+Purpose:
+Reduce repeated baseline setup effort
+
+_________________________
+
+🔌 Network Configuration
+
+Possible Automation:
+• Static IP template application
+• Connectivity checks
+• Route validation
+• DNS validation
+
+Purpose:
+Improve consistency and speed for network setup
+
+_________________________
+
+📦 Repository / Package Source
+
+Possible Automation:
+• Repo mount and repo entry creation
+• Cache refresh
+• Repo validation
+
+Purpose:
+Reduce setup time and detect repo issues early
+
+_________________________
+
+🧩 Role / Feature Installation
+
+Possible Automation:
+• Standard package lists
+• Role-based install scripts
+• Feature presence checks
+
+Purpose:
+Improve repeatability of functional setup
+
+_________________________
+
+🏢 Identity / Domain Integration
+
+Possible Automation:
+• Validation checks for DNS and time
+• Partial domain join helpers where environment allows
+
+Purpose:
+Reduce manual preparation effort before integration
+
+_________________________
+
+🔐 Security / Certificate Setup
+
+Possible Automation:
+• Certificate import where repeatable
+• Trust validation checks
+• Certificate presence checks
+
+Purpose:
+Improve repeatability of certificate handling
+
+_________________________
+
+⚙️ Service Configuration
+
+Possible Automation:
+• Service enable/start actions
+• Service status checks
+• Listening port checks
+
+Purpose:
+Reduce manual service handling and improve validation speed
+
+_________________________
+
+🧪 Validation
+
+Possible Automation:
+• System health checks
+• Network validation
+• Service checks
+• Log checks
+• Basic deployment summary output
+
+Purpose:
+Provide faster and more consistent validation
+
+=====================
+IMPLEMENTATION ORDER
+=====================
+
+Recommended order from lower risk to higher risk:
+
+1. Validation scripts
+2. System information gathering
+3. Baseline configuration checks
+4. Network validation checks
+5. Repo validation
+6. Service status checks
+7. Documentation export
+8. Baseline configuration scripts
+9. Network configuration scripts
+10. Role / package installation scripts
+11. Service configuration scripts
+12. Integration support scripts
+13. Certificate handling scripts
+
+=====================
+AUTOMATION STRATEGY COMPLETE
+=====================

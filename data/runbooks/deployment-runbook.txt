@@ -1,0 +1,256 @@
+DEPLOYMENT RUNBOOK
+
+=====================
+DAY 1 INFRASTRUCTURE DEPLOYMENT
+=====================
+PURPOSE
+Provide a structured execution flow for deployment activities from preparation to handover.
+=====================
+
+🧭 1. PRE-DEPLOYMENT REVIEW
+
+Objective:
+Confirm that deployment can begin with the required inputs, resources, and dependencies in place.
+
+Inputs:
+• Requirements
+• IP plan
+• Deployment documents
+• ISO / package sources
+• Certificates (if required)
+
+Actions:
+• Review deployment scope
+• Confirm target hostname and role
+• Confirm network details
+• Confirm required resources are accessible
+
+Checks:
+• Required documents are available
+• No unresolved blockers
+• Deployment prerequisites are understood
+
+Output:
+Deployment is ready to begin
+_________________________
+
+🖥️ 2. HOST / ENVIRONMENT PREPARATION
+
+Objective:
+Prepare the physical or virtual environment for operating system installation.
+
+Actions:
+• Power on server or VM
+• Access console
+• Verify hardware / virtual resources
+• Configure BIOS / virtualization settings if needed
+• Set boot order
+
+Checks:
+• CPU, memory, disk, and interfaces are detected
+• Console access is stable
+• Environment is ready for installation media
+
+Output:
+Host is ready for OS installation
+_________________________
+
+💿 3. OPERATING SYSTEM INSTALLATION
+
+Objective:
+Install the required base operating system.
+
+Actions:
+• Mount installation media
+• Perform OS installation
+• Configure disk layout
+• Apply base system settings
+
+Checks:
+• OS installs successfully
+• Disk layout is correct
+• System boots successfully
+
+Output:
+Base operating system installed
+_________________________
+
+⚙️ 4. BASE CONFIGURATION
+
+Objective:
+Establish system identity and baseline settings.
+
+Actions:
+• Set hostname
+• Configure timezone
+• Configure time synchronisation
+• Create required local users if applicable
+
+Checks:
+• Hostname is correctly applied
+• Time and timezone are correct
+• System clock is consistent
+
+Output:
+System identity established
+_________________________
+
+🔌 5. NETWORK CONFIGURATION
+
+Objective:
+Enable communication with the surrounding environment.
+
+Actions:
+• Configure IP address
+• Configure subnet
+• Configure gateway
+• Configure DNS
+
+Checks:
+• IP address is correctly assigned
+• Interface is up
+• Gateway is reachable
+• DNS resolves required internal hosts
+
+Output:
+System is network-reachable
+_________________________
+
+📦 6. REPOSITORY / PACKAGE SOURCE SETUP
+
+Objective:
+Enable package or feature installation.
+
+Actions:
+• Mount offline repository or configure package source
+• Validate repository path
+• Refresh repository metadata if needed
+
+Checks:
+• Repository is accessible
+• Package list can be retrieved
+• No errors occur when querying package source
+
+Output:
+System can retrieve required packages or features
+_________________________
+
+🧩 7. ROLE / FEATURE INSTALLATION
+
+Objective:
+Install the components needed for the system’s intended function.
+
+Actions:
+• Install required packages
+• Install required roles or features
+• Confirm required binaries and services are present
+
+Checks:
+• Installation completes successfully
+• Intended roles/features are present
+• No unresolved installation errors
+
+Output:
+System functionality installed
+_________________________
+
+🏢 8. IDENTITY / DOMAIN INTEGRATION
+
+Objective:
+Integrate the system into the wider identity environment where required.
+
+Actions:
+• Join domain if applicable
+• Verify authentication
+• Confirm DNS and time alignment
+
+Checks:
+• Domain name resolves
+• Authentication succeeds
+• Time is synchronised with the environment
+
+Output:
+System is integrated into the identity environment
+_________________________
+
+🔐 9. SECURITY / CERTIFICATE SETUP
+
+Objective:
+Enable secure trust and communication.
+
+Actions:
+• Install certificates
+• Configure trust chain
+• Apply service certificate references if needed
+
+Checks:
+• Certificates are present
+• Certificate chain is trusted
+• Services recognise the intended certificate
+
+Output:
+Secure communication prerequisites are in place
+_________________________
+
+⚙️ 10. SERVICE CONFIGURATION
+
+Objective:
+Configure and activate required services.
+
+Actions:
+• Apply service settings
+• Enable services
+• Start services
+
+Checks:
+• Services are running
+• Services are enabled at boot
+• Required ports are listening where applicable
+
+Output:
+Services are operational
+_________________________
+
+🧪 11. VALIDATION
+
+Objective:
+Confirm readiness of the deployed system.
+
+Actions:
+• Perform system checks
+• Perform network checks
+• Perform service checks
+• Review logs
+
+Checks:
+• No critical disk or memory issues
+• Connectivity is working
+• Required services are running
+• No critical log errors are present
+
+Output:
+System is validated
+_________________________
+
+📄 12. DOCUMENTATION & HANDOVER
+
+Objective:
+Capture the implemented state and transfer ownership.
+
+Actions:
+• Record hostname
+• Record IP details
+• Record installed roles / services
+• Update deployment documents
+• Prepare handover summary
+
+Checks:
+• Documentation is complete
+• Configuration matches intended deployment
+• Handover information is usable by others
+
+Output:
+Deployment is documented and ready for handover
+=====================
+RUNBOOK COMPLETE
+=====================

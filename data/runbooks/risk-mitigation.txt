@@ -1,0 +1,132 @@
+RISK & MITIGATION REGISTER
+
+=====================
+DAY 1 DEPLOYMENT
+=====================
+
+PURPOSE
+Capture common deployment risks and practical mitigation actions.
+=====================
+
+1. Risk:
+Unclear deployment requirements
+
+Impact:
+Incorrect build or rework
+
+Mitigation:
+Confirm hostname, role, IP plan, and intended system function before deployment begins
+
+_________________________
+
+2. Risk:
+Host or VM not prepared correctly
+
+Impact:
+Deployment delay or installation failure
+
+Mitigation:
+Verify hardware / virtual resource readiness, console access, and boot configuration before OS installation
+
+_________________________
+
+3. Risk:
+Incorrect network configuration
+
+Impact:
+Loss of connectivity, failed integration, failed validation
+
+Mitigation:
+Validate IP address, subnet, gateway, and DNS details before applying configuration
+
+_________________________
+
+4. Risk:
+Repository or package source inaccessible
+
+Impact:
+Packages or features cannot be installed
+
+Mitigation:
+Confirm repository path, media mounting, and package retrieval before installation stage
+
+_________________________
+
+5. Risk:
+DNS resolution failure
+
+Impact:
+Domain integration and service communication issues
+
+Mitigation:
+Test internal name resolution before domain join and service validation
+
+_________________________
+
+6. Risk:
+Time synchronisation misalignment
+
+Impact:
+Authentication failure, trust issues, inconsistent logs
+
+Mitigation:
+Configure and verify time sync early in the deployment
+
+_________________________
+
+7. Risk:
+Required packages or roles not installed fully
+
+Impact:
+System function incomplete
+
+Mitigation:
+Validate package installation results and confirm expected services/binaries are present
+
+_________________________
+
+8. Risk:
+Certificate or trust chain issues
+
+Impact:
+Secure services fail or are not trusted
+
+Mitigation:
+Validate certificate presence, intended trust chain, and service recognition of certificates
+
+_________________________
+
+9. Risk:
+Service misconfiguration
+
+Impact:
+Service fails to start or does not behave as expected
+
+Mitigation:
+Apply configuration carefully, validate status after changes, and confirm listening ports where required
+
+_________________________
+
+10. Risk:
+Validation is incomplete
+
+Impact:
+Issues pass into handover unnoticed
+
+Mitigation:
+Use a standard validation checklist before handover
+
+_________________________
+
+11. Risk:
+Documentation is incomplete
+
+Impact:
+Operational handover is weak and knowledge is lost
+
+Mitigation:
+Capture hostname, IP details, installed roles, and key configuration outcomes before handover
+
+=====================
+RISK REVIEW COMPLETE
+=====================

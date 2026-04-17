@@ -1,0 +1,55 @@
+ENVIRONMENT CONSTRAINTS
+
+=====================
+DEPLOYMENT ENVIRONMENT
+=====================
+
+PURPOSE
+Define limitations and boundaries that affect deployment design and execution.
+=====================
+
+🧭 CONNECTIVITY
+
+• Offline environment  
+• Limited external access  
+
+_________________________
+
+🖥️ RESOURCES
+
+• CPU / memory limitations  
+• Storage limitations  
+
+_________________________
+
+🔌 NETWORK
+
+• Restricted network segments  
+• Limited routing paths  
+
+_________________________
+
+🔐 SECURITY
+
+• Strict access controls  
+• Limited external communication  
+
+_________________________
+
+📦 PACKAGE MANAGEMENT
+
+• Offline repositories  
+• Limited update sources  
+
+_________________________
+
+🎯 IMPACT
+
+Constraints affect:
+• Deployment approach  
+• Automation capability  
+• Integration options  
+
+=====================
+CONSTRAINTS DEFINED
+=====================

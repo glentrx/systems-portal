@@ -1,0 +1,81 @@
+DEPLOYMENT ACCEPTANCE CRITERIA
+
+=====================
+DAY 1 DEPLOYMENT
+=====================
+
+PURPOSE
+Define the conditions that must be met for a system to be considered successfully deployed.
+=====================
+
+🧭 SYSTEM AVAILABILITY
+
+• System boots successfully  
+• System is reachable within the network  
+
+_________________________
+
+🔌 NETWORK
+
+• IP address is correctly configured  
+• Gateway is reachable  
+• DNS resolves required hosts  
+
+_________________________
+
+⚙️ SERVICES
+
+• Required services are installed  
+• Services are running  
+• Services are enabled at boot  
+
+_________________________
+
+🏢 INTEGRATION
+
+• Domain integration works if required  
+• Authentication succeeds  
+• System is recognised in environment  
+
+_________________________
+
+🔐 SECURITY
+
+• Certificates are installed correctly  
+• Certificate chain is trusted  
+• Secure communication works where required  
+
+_________________________
+
+📜 LOGS
+
+• No critical or recurring errors  
+• Logs reflect expected behaviour  
+
+_________________________
+
+🧪 VALIDATION
+
+• System checks pass  
+• Network checks pass  
+• Service checks pass  
+
+_________________________
+
+📄 DOCUMENTATION
+
+• Hostname recorded  
+• IP details recorded  
+• Roles and services documented  
+
+_________________________
+
+🎯 ACCEPTANCE
+
+[ ] ACCEPTED  
+[ ] ACCEPTED WITH CONDITIONS  
+[ ] NOT ACCEPTED  
+
+=====================
+ACCEPTANCE COMPLETE
+=====================

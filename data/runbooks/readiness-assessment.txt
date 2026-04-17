@@ -1,0 +1,161 @@
+ENVIRONMENT READINESS ASSESSMENT
+
+=====================
+PRE-DEPLOYMENT READINESS
+=====================
+
+PURPOSE
+Evaluate whether all required inputs, resources, and dependencies are in place before deployment begins.
+=====================
+
+🧭 1. DOCUMENTATION & SCOPE
+
+Objective:
+Confirm that the deployment scope and requirements are clearly defined.
+
+Assessment:
+• Deployment requirements are available  
+• Deployment scope is understood  
+• Hostname is confirmed  
+• IP plan is confirmed  
+• System role / function is defined  
+
+Decision Check:
+• No ambiguity in deployment requirements  
+• Scope is clear and agreed  
+
+_________________________
+
+🖥️ 2. HOST / PLATFORM READINESS
+
+Objective:
+Confirm that the target environment is prepared for deployment.
+
+Assessment:
+• Physical host or VM is available  
+• Console access is functional  
+• CPU, memory, and disk resources are sufficient  
+• Network interfaces are available  
+
+Decision Check:
+• Platform is accessible and stable  
+• No resource limitations identified  
+
+_________________________
+
+💿 3. INSTALLATION MATERIALS
+
+Objective:
+Confirm that required installation resources are ready.
+
+Assessment:
+• Operating system media is available  
+• Correct OS version is confirmed  
+• Required drivers or tools are available if needed  
+
+Decision Check:
+• Installation can proceed without missing components  
+
+_________________________
+
+📦 4. PACKAGE / FEATURE SOURCES
+
+Objective:
+Ensure package installation sources are accessible.
+
+Assessment:
+• Offline repository or package source is accessible  
+• Required packages/features are identified  
+• Repository path or media location is confirmed  
+
+Decision Check:
+• Packages can be retrieved without errors  
+
+_________________________
+
+🔌 5. NETWORK READINESS
+
+Objective:
+Confirm that network configuration inputs are valid.
+
+Assessment:
+• IP address is allocated  
+• Subnet is confirmed  
+• Gateway is confirmed  
+• DNS details are confirmed  
+• Required connectivity path is available  
+
+Decision Check:
+• Network configuration can be applied without conflict  
+• Required connectivity is achievable  
+
+_________________________
+
+🏢 6. IDENTITY / INTEGRATION READINESS
+
+Objective:
+Confirm prerequisites for integration with identity services.
+
+Assessment:
+• Domain details are confirmed (if required)  
+• Required credentials are available  
+• Time synchronisation requirements are understood  
+
+Decision Check:
+• System can integrate with identity environment when required  
+
+_________________________
+
+🔐 7. SECURITY READINESS
+
+Objective:
+Confirm that security prerequisites are available.
+
+Assessment:
+• Certificates are available (if required)  
+• Trust chain requirements are understood  
+• Security constraints or baselines are identified  
+
+Decision Check:
+• Security configuration can proceed without missing components  
+
+_________________________
+
+👥 8. ACCESS & OWNERSHIP
+
+Objective:
+Ensure access and ownership are defined before deployment.
+
+Assessment:
+• Required administrative access is available  
+• Deployment responsibilities are understood  
+• Handover owner is identified  
+
+Decision Check:
+• Access is sufficient to complete deployment  
+• Ownership is clearly defined  
+
+_________________________
+
+🧪 9. OVERALL READINESS DECISION
+
+Objective:
+Determine whether deployment can proceed.
+
+Assessment:
+• No critical blockers identified  
+• All required inputs are available  
+• Dependencies are satisfied  
+
+Decision Outcome:
+
+[ ] Ready to Proceed  
+[ ] Proceed with Conditions  
+[ ] Not Ready  
+
+Notes:
+• Document any conditions or blockers before proceeding  
+
+=====================
+READINESS ASSESSMENT COMPLETE
+=====================

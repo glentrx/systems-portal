@@ -1,0 +1,148 @@
+CHANGE & ROLLBACK PLAN
+
+=====================
+DAY 1 DEPLOYMENT
+=====================
+
+PURPOSE
+Provide a simple rollback approach for deployment activities that do not produce the intended result.
+=====================
+
+🧭 ROLLBACK PRINCIPLES
+
+• Stop and assess before making repeated changes
+• Identify the last successful state
+• Revert only the affected layer if possible
+• Re-validate after rollback
+
+=====================
+ROLLBACK BY STAGE
+=====================
+
+🖥️ Host / Platform Preparation
+
+Issue:
+Incorrect host configuration or unavailable resources
+
+Rollback Approach:
+• Revert host settings to known-good baseline
+• Re-check console and resource assignment
+
+_________________________
+
+💿 OS Installation
+
+Issue:
+Installation failure or incorrect layout
+
+Rollback Approach:
+• Re-run installation after correcting media or disk layout
+• Rebuild from clean state if needed
+
+_________________________
+
+⚙️ Base Configuration
+
+Issue:
+Incorrect hostname, timezone, or baseline settings
+
+Rollback Approach:
+• Reapply intended baseline values
+• Remove incorrect user or baseline changes if applicable
+
+_________________________
+
+🔌 Network Configuration
+
+Issue:
+Loss of connectivity or invalid addressing
+
+Rollback Approach:
+• Restore previous known-good network settings
+• Reapply validated IP plan values
+• Re-test gateway and DNS
+
+_________________________
+
+📦 Repository / Package Source
+
+Issue:
+Repo inaccessible or broken configuration
+
+Rollback Approach:
+• Unmount incorrect media or remove incorrect repo entry
+• Restore known-good repo configuration
+• Re-test package retrieval
+
+_________________________
+
+🧩 Role / Feature Installation
+
+Issue:
+Installation incomplete or unintended packages applied
+
+Rollback Approach:
+• Remove incorrectly installed packages/features where safe
+• Re-run installation using corrected package list
+
+_________________________
+
+🏢 Identity / Domain Integration
+
+Issue:
+Domain join or authentication failure
+
+Rollback Approach:
+• Leave domain if partial join occurred
+• Restore standalone state if needed
+• Re-check DNS, time, and credentials before retry
+
+_________________________
+
+🔐 Security / Certificate Setup
+
+Issue:
+Certificate not trusted or incorrect certificate applied
+
+Rollback Approach:
+• Remove incorrect certificate if safe
+• Restore intended certificate/trust configuration
+• Re-validate service trust
+
+_________________________
+
+⚙️ Service Configuration
+
+Issue:
+Service fails after configuration change
+
+Rollback Approach:
+• Restore last known-good service configuration
+• Disable recent change if necessary
+• Re-start service and verify status
+
+_________________________
+
+🧪 Validation
+
+Issue:
+Critical failure found during validation
+
+Rollback Approach:
+• Trace issue to affected stage
+• Revert only the affected configuration area
+• Re-run validation after correction
+
+=====================
+ROLLBACK DECISION GUIDE
+=====================
+
+Rollback should be considered when:
+• A change causes loss of required function
+• A configuration cannot be validated
+• A system becomes less stable after modification
+• Critical errors appear and root cause is not yet clear
+
+=====================
+ROLLBACK PLAN COMPLETE
+=====================
